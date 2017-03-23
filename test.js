@@ -3,6 +3,7 @@ const insert = require('./insertsort/insertsort')
 const sel = require('./selsort/selsort')
 const quick = require('./quicksort/quicksort')
 const heap = require('./heapsort/heapsort')
+const shell = require('./shellsort/shellsort')
 function random ({min = 0, max = 100, arrSize = 100} = {}) {
   const data = []
   for (let i = 0; i < arrSize; i++) {
@@ -19,7 +20,8 @@ function main () {
   // const sortData = insert.sort({data: data})
   // const sortData = sel.sort({data: data})
   // const sortData = quick.sort({data: data, rightPoint: data.length - 1, leftPoint: 0})
-  const sortData = heap.sort({data: data})
+  // const sortData = heap.sort({data: data})
+  const sortData = shell.sort({data: data})
   console.log(sortData)
 }
 
